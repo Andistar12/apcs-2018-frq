@@ -59,6 +59,8 @@ public class FrogSimulation {
          *          then I would be doing integer division, which would drop the fractional
          *          bit and only return zero. The problem also asks to return a double
          *          An alternative solution would be to declare the running total to be a double
+         *      Note the precondition that num is guaranteed to be >= 1. This means
+         *          you don't have to perform any input checks
          */
         int totalWins = 0;
 

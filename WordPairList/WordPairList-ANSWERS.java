@@ -20,6 +20,8 @@ public class WordPairList {
          *          exact). Note that since the allPairs variable is in the same class
          *          as this method, you can just directly use it without any other
          *          dot notation. 
+         *      Note the precondition that there will be at least 2 words in the list.
+         *          This means you don't have to check the edge cases of having less than that
          */
        
         allPairs = new ArrayList<WordPair>();
