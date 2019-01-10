@@ -1,31 +1,35 @@
 /*
  * IMO the most difficult problem on the test due to size and concepts
- *      Note that StringChecker is an interface. Not only does it need to
- *          be "implemented," but the method isValid() also needs to be 
- *          implemented. The @Override is optional technically, but it's 
- *          good practice to include it to indicate.
- *      Note that we have two separate constructors; we are overriding it.
+ *      The problem states that CodeWordChecker is a StringChecker. They further
+ *          employ polymorphism when they create "new CodeWordChecker" objects but
+ *          declare sc1 and sc2 as Stringcheckers. Do NOT forget to add StringChecker
+ *          to the class declaration (first line of code). Also note that StringChecker 
+ *          is an interface, not an abstract class. StringChecker must be implemented
+ *          rather than extended from.
+ *      Note that we need two separate constructors; we are overriding them.
  *          Each must be named the exact same thing but have different 
  *          parameters, and the body of each constructor must be different
+ *          to fit the requirements of each constructor
+ *      Since CodeWordChecker is a StringChecker, the method isValid() needs to be 
+ *          implemented. isValid must match exactly what it is declared as in the
+ *          StringClass: it returns a boolean and accepts only one argument, that 
+ *          being the code word String. The "@Override" annotation is optional, but 
+ *          it's generally good practice to include it to indicate inheritance. 
+ *      Note that only one isValid() method wil be implemented, despite two 
+ *          constructors. You need to make sure that no matter which constructor is 
+ *          called, isValid will still work. 
  *      Also note that the problem asks for default min and max values should
  *          none be provided. This is set in the same line as the declarations.
  *          You can also set them in the second constructor; either is fine
  *      As you are responsible for the entire class, variable names don't 
- *          actually matter as long as they are present. However, you will need
+ *          actually matter as long as they work. However, you will need
  *          three variables saved as class fields that will be accessed in
  *          the isValid implementation
  *      The implementation of isValid should not be too hard as it only
  *          requires basic String checking. Note that there must be a 
  *          "return true" at the end if all the fail checks don't trigger.
- *          Also note that the code word String is case sensitive.
- *      
- *      Note that there is only one isValid method even though there
- *          are two constructors. Regardless of which constructor is called,
- *          the same isValid method will be called and must be 
- *      If you look at the problem, you may notice polymorphism used: sc1 and
- *          sc2 create CodeWordChecker objects but declare them only as 
- *          StringCheckers. This makes the StringChecker implementation
- *          the most important aspect of this problem
+ *          Also note that the code word is a case-sensitive String; you
+ *          don't have to anything fancy manipulating the input any way.
  */
 
 public class CodeWordChecker implements StringChecker {
