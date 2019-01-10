@@ -15,7 +15,8 @@ public class WordPairList {
          *          manage the other bounds automatically (>= 0, < words.length). Note 
          *          that j can start at 1 or 0, it doesn't actually matter
          *      You'll have to create a new WordPair object. I created a separate object
-         *          wp for mine, but you don't really have to
+         *          "wp" for mine, but you don't really have to assign a variable; you can
+         *          just directly add it to the array.
          *      You'll have to add it to the pre-existing allPairs array (ArrayList to be
          *          exact). Note that since the allPairs variable is in the same class
          *          as this method, you can just directly use it without any other
@@ -47,7 +48,8 @@ public class WordPairList {
          *          multiple choice problems may even expect you to be familiar with it
          *      You must recognize that allPairs saves WordPairs, not pairs of words. WordPairs
          *          is an object representing pairs of words, and it has .getFirst() and .getSecond()
-         *          variable getter methods that you must use.
+         *          variable getter methods that you must use. There is no other way to 
+         *          access the individual words.
          *      Note that == does NOT work with Strings. You must use the .equals() method
          *      Don't forget to return your running total. That's the whole point of this method
          */
